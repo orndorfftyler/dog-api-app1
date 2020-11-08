@@ -9,6 +9,13 @@ form {
     margin:auto;
 }
 
+div {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    width:201px;
+}
+
 label, input {
     margin: 20px 0;
 }
@@ -16,4 +23,8 @@ label, input {
 button {
     width: 80px;
     margin: auto;
+}
+
+a {
+    margin: 20px 0;
 }
