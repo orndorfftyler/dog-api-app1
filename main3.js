@@ -3,10 +3,6 @@ function showDogs(responseJson) {
     $('div').html('<img src="'+ responseJson.message + '" width="200px">');
 }
 
-function tryAgain() {
-    $('div').html('<p>Breed not found! Try another</p>');
-}
-
 function getDogs(dogBreed) {
     fetch('https://dog.ceo/api/breed/'+ dogBreed + '/images/random')
     .then(function(response) {
