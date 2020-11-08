@@ -1,29 +1,24 @@
 
 function showDogs(responseJson) {
-    let arr = [];
-    for (let i = 0; i < responseJson.message.length; i++) {
-        arr.push('<img src="'+ responseJson.message[i] + '" width="200px">')
-    }
-    $('div').html(arr.join());
+    //console.log(responseJson);
+    
+    $('div').html('<img src="'+ responseJson.message + '" width="200px">');
 }
 
 
-function getDogs(dogNum) {
-    //console.log('https://dog.ceo/api/breeds/image/random/'+dogNum);
-    fetch('https://dog.ceo/api/breeds/image/random/'+dogNum)
+function getDogs(dogBreed) {
+    fetch('https://dog.ceo/api/breed/'+ dogBreed + '/images/random')
     .then(response => response.json())
     .then(responseJson => showDogs(responseJson))
-    .catch(error => alert('Dogs are lost! Come back later'));
+    .catch(error => alert('Breed not found! Try another'));
 }
 
 function watchForm() {
     $('form').on('click', 'button', event => {
         event.preventDefault();
-        let dogNum = $('input').val();
+        let dogBreed = $('input').val();
         //console.log(dogNum);
-        if (dogNum <= 50) {
-            getDogs(dogNum);
-        }
+            getDogs(dogBreed);
     });
 }
 

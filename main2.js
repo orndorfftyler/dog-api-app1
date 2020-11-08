@@ -7,7 +7,6 @@ function showDogs(responseJson) {
     $('div').html(arr.join());
 }
 
-
 function getDogs(dogNum) {
     //console.log('https://dog.ceo/api/breeds/image/random/'+dogNum);
     fetch('https://dog.ceo/api/breeds/image/random/'+dogNum)
@@ -21,12 +20,11 @@ function watchForm() {
         event.preventDefault();
         let dogNum = $('input').val();
         //console.log(dogNum);
-        if (dogNum <= 50) {
+        if (dogNum <= 50 && dogNum > 0) {
             getDogs(dogNum);
         }
     });
 }
-
 
 $(function() {
     watchForm();
