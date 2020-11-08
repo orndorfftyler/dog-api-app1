@@ -1,0 +1,19 @@
+main {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin:auto;
+}
+
+label, input {
+    margin: 20px 0;
+}
+
+button {
+    width: 80px;
+    margin: auto;
+}
