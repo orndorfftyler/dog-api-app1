@@ -1,16 +1,20 @@
 
-function showDogs(responseJson) {
+function displayResults(responseJson) {
     let arr = [];
+
     for (let i = 0; i < responseJson.message.length; i++) {
-        arr.push('<img src="'+ responseJson.message[i] + '" width="200px">')
+        arr.push('<img src="'+ responseJson.message[i] + '" class="results-img" width="200px">');
     }
-    $('div').html(arr.join());
+
+    $('.results-img').remove();
+    $('div').append(arr.join(''));
+    $('.results').removeClass('hidden');
 }
 
 function getDogs(dogNum) {
     fetch('https://dog.ceo/api/breeds/image/random/'+dogNum)
     .then(response => response.json())
-    .then(responseJson => showDogs(responseJson));
+    .then(responseJson => displayResults(responseJson));
 }
 
 function watchForm() {

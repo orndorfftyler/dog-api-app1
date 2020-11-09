@@ -22,7 +22,6 @@ function watchForm() {
     });
 }
 
-
 $(function() {
     watchForm();
 

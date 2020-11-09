@@ -9,6 +9,14 @@ form {
     margin:auto;
 }
 
+.hidden {
+    display:none;
+}
+
+.results-img {
+    margin: 10px 0;
+}
+
 div {
     display: flex;
     flex-direction: column;
