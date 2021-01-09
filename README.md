@@ -1,5 +1,7 @@
 # dog-api-app1
 
+[https://orndorfftyler.github.io/dog-api-app1/](https://orndorfftyler.github.io/dog-api-app1/)
+
 This was a fun introduction to working with APIs.
 
 The app grabs data from the internet's biggest collection of open source dog pictures (dog.ceo).
@@ -12,4 +14,3 @@ Question 3 allows the user to choose a specific breed of dog for which to displa
 
 Built with HTML, CSS, JavaScript, jQuery.
 
-[Check it out](https://orndorfftyler.github.io/dog-api-app1/)
